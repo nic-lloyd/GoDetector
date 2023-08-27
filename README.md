@@ -8,10 +8,10 @@ As a very new Go player, I found it tedious to properly score my games by area w
 
 ##### 1. Identifying the Playing Area
 
-The first challenge in analyzing a Go board is orienting yourself and giving yourself a nice flat image. To do this we need to identify the corners of the play area. First I use [canny edge detection](edges.png) on a grayscale version of the input image. I then clean up the image by using [dilation and erosion](erosion.png) to give us a sleek outline of th eplay area. Next we can identify the corners by finding the white pixel that is closest to each corner of the image and use these points to [crop our image](transformedPerspective.png) with our new corners, thus giving us a flat, top-down view of our playing area.
+The first challenge in analyzing a Go board is orienting yourself and giving yourself a nice flat image. To do this we need to identify the corners of the play area. First I use [canny edge detection](edges.png) on a grayscale version of the input image. I then clean up the image by using [dilation and erosion](erosion.png) to give us a sleek outline of th eplay area. Next we can identify the corners by finding the white pixel that is closest to each corner of the image and use these points to [crop our image](transformedperspective.png) with our new corners, thus giving us a flat, top-down view of our playing area.
 
 <img src='board.png' alt='Input Image' width='200' style='float:left;'>
-<img src='edges.png' alt='Canny Edge Detection' width='200' style='float:left;'> <img src='erosion.png' alt='Dilcaiton and Erosion' width='200' style='float:left;'> <img src='corners.png' alt='Detected Corners' width='200' style='float:left;'> <img src='transformedPerspective.png' alt='Cropped Image' height='190' style=''>
+<img src='edges.png' alt='Canny Edge Detection' width='200' style='float:left;'> <img src='erosion.png' alt='Dilcaiton and Erosion' width='200' style='float:left;'> <img src='corners.png' alt='Detected Corners' width='200' style='float:left;'> <img src='transformedperspective.png' alt='Cropped Image' height='190' style=''>
 
 ##### 2. Constructing the Intersections
 
